@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @param array $field
+ */
+return function (array $field) {
+    $options = pick($field, 'options', []);
+    ?>
+    <div class="form-group">
+        <label for="<?php echo pick($field, 'id'); ?>">
+            <?php echo pick($field, 'label'); ?>
+        </label>
+        <select
+            class="form-control <?php echo pick($field, 'class'); ?>"
+            aria-describedby="<?php echo pick($field, 'aria'); ?>"
+            name="<?php echo pick($field, 'name'); ?>"
+            id="<?php echo pick($field, 'id'); ?>"
+            multiple="<?php echo(pick($field, 'multiple') ? 'false' : 'true'); ?>"
+        >
+            <?php
+            foreach ($options as $option) {
+                ?>
+                <option value="<?php echo pick($option, 'value'); ?>">
+                    <?php echo pick($option, 'label'); ?>
+                </option>
+                <?php
+            }
+            ?>
+        </select>
+        <small class="form-text text-muted"><?php echo pick($field, 'help'); ?></small>
+    </div>
+    <?php
+};

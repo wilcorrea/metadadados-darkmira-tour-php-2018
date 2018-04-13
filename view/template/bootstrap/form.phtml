@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @param array
+ */
+return function (array $fields) {
+    ?>
+    <form>
+        <?php
+        foreach ($fields as $field) {
+            $this->renderField($field);
+        }
+        ?>
+    </form>
+    <?php
+};

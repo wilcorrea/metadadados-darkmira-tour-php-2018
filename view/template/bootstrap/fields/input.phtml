@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @param array $field
+ */
+return function (array $field) {
+    ?>
+        <div class="form-group">
+            <label for="<?php echo pick($field, 'name'); ?>">
+                <?php echo pick($field, 'label'); ?>
+            </label>
+            <input
+                id="<?php echo pick($field, 'name'); ?>"
+                name="<?php echo pick($field, 'name'); ?>"
+                type="<?php echo pick($field, 'type'); ?>"
+                class="form-control <?php echo pick($field, 'class'); ?>"
+                aria-describedby="<?php echo pick($field, 'aria'); ?>"
+                placeholder="<?php echo pick($field, 'placeholder'); ?>"
+            >
+            <small class="form-text text-muted"><?php echo pick($field, 'help'); ?></small>
+        </div>
+    <?php
+};
