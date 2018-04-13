@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @param string $context
+ * @param array $fields
+ * @param array $data
+ */
+return function (string $context, array $fields, array $data = []) {
+    ?>
+    <form>
+        <?php
+        foreach ($fields as $field) {
+            $this->renderField($field, pick($data, $field['id']));
+        }
+        ?>
+    </form>
+    <?php
+};

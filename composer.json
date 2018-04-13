@@ -10,7 +10,10 @@
   ],
   "require": {},
   "autoload": {
-    "App\\Infra\\": "src/Infra/",
-    "App\\Domains\\": "src/Domains/"
+    "files": ["bootstrap/function.php"],
+    "psr-4": {
+      "App\\Domains\\": "src/Domains/",
+      "App\\Infra\\": "src/Infra/"
+    }
   }
 }
