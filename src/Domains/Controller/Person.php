@@ -63,7 +63,7 @@ class Person
      */
     private function fromTheme(string $path)
     {
-        $filename = __APP_ROOT__ . '/resources/template/' . __APP_TEMPLATE__ . '/' . $path . '.phtml';
+        $filename = __APP_ROOT__ . '/resources/templates/' . __APP_TEMPLATE__ . '/' . $path . '.phtml';
         if (file_exists($filename)) {
             return $filename;
         }
