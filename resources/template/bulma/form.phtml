@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @param array $fields
+ * @param array $data
+ */
+return function (array $fields, array $data = []) {
+    ?>
+    <html>
+    <head>
+        <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css"
+                crossorigin="anonymous"
+        >
+    </head>
+    <body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Hello World
+            </h1>
+            <p class="subtitle">
+                Using <strong>Bulma</strong>!
+            </p>
+        </div>
+        <div class="container">
+            <form>
+                <?php
+                foreach ($fields as $field) {
+                    $this->renderField($field, pick($data, $field['id']));
+                }
+                ?>
+            </form>
+        </div>
+    </section>
+    </body>
+    </html>
+    <?php
+};

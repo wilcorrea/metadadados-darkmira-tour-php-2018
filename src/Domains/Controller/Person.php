@@ -2,12 +2,8 @@
 
 namespace App\Domains\Controller;
 
-use App\Domains\Model\Person as Model;
+use App\Domains\Model\PersonWithMeta as Model;
 use ErrorException;
-use function file_exists;
-use function is_callable;
-use function pick;
-use const __APP_TEMPLATE__;
 
 /**
  * Class Person

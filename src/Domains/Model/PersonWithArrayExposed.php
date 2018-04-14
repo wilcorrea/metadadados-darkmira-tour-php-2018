@@ -3,10 +3,10 @@
 namespace App\Domains\Model;
 
 /**
- * Class Person
+ * Class PersonArrayExposed
  * @package App\Domains\Model
  */
-class Person
+class PersonWithArrayExposed
 {
     /**
      * @var array
